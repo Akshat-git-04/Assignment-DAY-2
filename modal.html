@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Modal</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="content-wrapper">
+      <a href="index.html" class="back-btn">← Back to Dashboard</a>
+      
+      <h1 class="page-title">CSS-Only Modal</h1>
+      <p class="page-description">
+        A modal dialog created with pure CSS using the checkbox hack. 
+        No JavaScript required! Features backdrop blur and smooth animations.
+      </p>
+
+      <div style="text-align: center; margin: 3rem 0;">
+        <label for="modal-toggle" class="open-modal-btn">Open Modal</label>
+        <input type="checkbox" id="modal-toggle" hidden>
+        
+        <div class="modal">
+          <div class="modal-content">
+            <label for="modal-toggle" class="close-modal-btn">&times;</label>
+            <h2>Welcome to the Modal!</h2>
+            <p>This is a CSS-only modal that doesn't require JavaScript! It uses the checkbox hack to toggle visibility.</p>
+            <p>The modal includes:</p>
+            <ul style="text-align: left; margin: 1rem 0;">
+              <li>Backdrop blur effect</li>
+              <li>Smooth scale animation</li>
+              <li>Click outside to close</li>
+              <li>Responsive design</li>
+            </ul>
+            <p>Try clicking the × button or the backdrop to close the modal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+        <h3>How CSS-Only Modal Works:</h3>
+        <ul style="margin-left: 2rem; margin-top: 1rem;">
+          <li><strong>Checkbox Hack</strong> - Uses hidden checkbox to track state</li>
+          <li><strong>:checked Pseudo-selector</strong> - Shows modal when checkbox is checked</li>
+          <li><strong>Label Elements</strong> - Act as clickable triggers</li>
+          <li><strong>CSS Animations</strong> - Smooth transitions and scaling effects</li>
+          <li><strong>Backdrop Filter</strong> - Blur effect behind the modal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

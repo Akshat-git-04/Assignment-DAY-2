@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail - CSS Grid</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="content-wrapper">
+      <a href="index.html" class="back-btn">← Back to Dashboard</a>
+      
+      <h1 class="page-title">Holy Grail Layout - CSS Grid</h1>
+      <p class="page-description">
+        The same Holy Grail layout implemented using CSS Grid. Grid provides more precise control 
+        over layout positioning and is ideal for complex layouts.
+      </p>
+
+      <div class="hg-container hg-grid-container">
+        <header class="hg-header">Header</header>
+        <aside class="hg-left">Left Sidebar</aside>
+        <main class="hg-main">
+          <h2>Main Content Area</h2>
+          <p>This main content section is positioned using CSS Grid areas. Grid makes it easy to create complex layouts with precise control.</p>
+        </main>
+        <aside class="hg-right">Right Sidebar</aside>
+        <footer class="hg-footer">Footer</footer>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+        <h3>Key CSS Grid Properties Used:</h3>
+        <ul style="margin-left: 2rem; margin-top: 1rem;">
+          <li><strong>display: grid</strong> - Creates a grid container</li>
+          <li><strong>grid-template-areas</strong> - Defines named grid areas</li>
+          <li><strong>grid-template-columns</strong> - Sets column sizes</li>
+          <li><strong>grid-area</strong> - Assigns elements to named areas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

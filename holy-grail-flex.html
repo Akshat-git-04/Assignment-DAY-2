@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail - Flexbox</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="content-wrapper">
+      <a href="index.html" class="back-btn">← Back to Dashboard</a>
+      
+      <h1 class="page-title">Holy Grail Layout - Flexbox</h1>
+      <p class="page-description">
+        The Holy Grail layout is a classic web design pattern with a header, footer, and three columns. 
+        This version uses Flexbox for flexible and responsive layout.
+      </p>
+
+      <div class="hg-container">
+        <header class="hg-header">Header</header>
+        <div class="hg-flex-container">
+          <aside class="hg-left">Left Sidebar</aside>
+          <main class="hg-main">
+            <h2>Main Content Area</h2>
+            <p>This is the main content section. It expands to fill the available space between the sidebars.</p>
+          </main>
+          <aside class="hg-right">Right Sidebar</aside>
+        </div>
+        <footer class="hg-footer">Footer</footer>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+        <h3>Key Flexbox Properties Used:</h3>
+        <ul style="margin-left: 2rem; margin-top: 1rem;">
+          <li><strong>display: flex</strong> - Creates a flex container</li>
+          <li><strong>flex-grow: 1</strong> - Main content expands to fill space</li>
+          <li><strong>flex-direction: column</strong> - Stack elements vertically on mobile</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

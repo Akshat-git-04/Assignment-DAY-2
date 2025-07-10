@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern CSS Dashboard</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰</button>
+    
+    <aside class="sidebar" id="sidebar">
+      <h2>CSS Projects</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard Home</a></li>
+          <li><a href="holy-grail-flex.html">Holy Grail (Flexbox)</a></li>
+          <li><a href="holy-grail-grid.html">Holy Grail (Grid)</a></li>
+          <li><a href="cards.html">Product Cards</a></li>
+          <li><a href="modal.html">CSS Modal</a></li>
+          <li><a href="loading.html">Loading Animations</a></li>
+          <li><a href="navigation.html">Responsive Nav</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="welcome-section">
+        <h1>Welcome to CSS Dashboard</h1>
+        <p>Explore modern CSS layout and design techniques using Flexbox, Grid, and animations. This dashboard showcases responsive design patterns and interactive components.</p>
+      </section>
+
+      <div class="dashboard-sections">
+        <!-- Project Statistics Section -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <div class="section-icon">📊</div>
+            <h2 class="section-title">Project Statistics</h2>
+          </div>
+          <p class="section-description">Overview of your CSS projects and components</p>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Total Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Components</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Layouts</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Animations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <div class="section-icon">🚀</div>
+            <h2 class="section-title">Recent Activity</h2>
+          </div>
+          <p class="section-description">Latest updates and completed projects</p>
+          
+          <div class="section-content">
+            <div class="section-item">
+              <div class="item-info">
+                <div class="item-name">Holy Grail Layout</div>
+                <div class="item-detail">Updated with Grid implementation</div>
+              </div>
+              <div class="item-badge">Completed</div>
+            </div>
+            <div class="section-item">
+              <div class="item-info">
+                <div class="item-name">Loading Animations</div>
+                <div class="item-detail">Added 3 new spinner types</div>
+              </div>
+              <div class="item-badge">New</div>
+            </div>
+            <div class="section-item">
+              <div class="item-info">
+                <div class="item-name">Product Cards</div>
+                <div class="item-detail">Enhanced hover effects</div>
+              </div>
+              <div class="item-badge">Updated</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions Section -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <div class="section-icon">⚡</div>
+            <h2 class="section-title">Quick Actions</h2>
+          </div>
+          <p class="section-description">Frequently used tools and shortcuts</p>
+          
+          <div class="quick-actions">
+            <button class="action-btn" onclick="window.location.href='cards.html'">
+              View Cards
+            </button>
+            <button class="action-btn secondary" onclick="window.location.href='modal.html'">
+              Test Modal
+            </button>
+            <button class="action-btn" onclick="window.location.href='loading.html'">
+              Animations
+            </button>
+            <button class="action-btn secondary" onclick="window.location.href='navigation.html'">
+              Navigation
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (window.innerWidth <= 768 && 
+          !sidebar.contains(event.target) && 
+          !toggle.contains(event.target)) {
+        sidebar.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
